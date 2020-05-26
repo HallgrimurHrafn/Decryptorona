@@ -1,0 +1,18 @@
+#Main menu:
+    make prutty
+
+
+#Username:
+    make prutty
+    update page on taken username error
+
+
+#Lobby:
+    add min start requirement
+    make main user more visible
+    add info
+    make pretty
+    move everyone ready to serverside
+
+#Game:
+    Everything is missing here still

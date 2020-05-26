@@ -1,0 +1,28 @@
+Layout Idea
+
+
+opnar Decryptorona.live
+tveir options.. Create room og join room.
+    create room byr til URL og færir þig þangað
+    join room færir bara adress á halliDecrypto.live/#### þar sem #### er room number
+        -auto vefsiða sem segir ekki se til.
+        nema einhver se buinn að bua til URL-ið áður.
+
+Room:
+    Skrifar inn nafnið þitt og ýtir á einhvern staðfestingar takka. 
+            -> sett i database
+            -> uppfærir live hjá þér og hinum
+
+    Game Lobby
+
+    þegar herbergið er tómt, allir disconnecta.. þá eyðum við roominu og öllu úr data baseinu.
+
+
+Game Lobby:
+    Fólk býr til nöfn þegar það joinar.
+        -> listi af nöfnum uppfærist hjá öllum þegar einhver joinar. ekki join fyrr en nafn buið til
+        -> fólk getur fært sig milli tveggja flokka (hópar)
+        -> allir fá ready takka, þegar allir eru ready þá er farið í MainGame
+
+Main game:
+    ---

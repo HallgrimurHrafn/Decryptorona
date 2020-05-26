@@ -1,0 +1,19 @@
+
+React dom
+
+switch control: "app"
+	-object storage
+	{username, lobby, game}
+
+-object storage:
+	teamchat1 & 2
+	player names | team | rotation
+	4 words team1 & team2
+	hints team1 & team2
+
+game:
+	{standardview, encryptersview, end}
+
+
+
+	
