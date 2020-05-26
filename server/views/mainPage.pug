@@ -1,0 +1,21 @@
+html
+  head
+    title= "Decrypto online"
+  body
+    h1= "Front page"
+
+    form(method='post' action='/')
+        button(type='submit') Create New Room
+
+
+    form(method='post' action='/joinRoom')
+      div
+        input.HTMLroomCode(
+          name='roomCodeInput'
+          type='text'
+          placeholder='asdf'
+          pattern='[a-zA-Z0-9]{4}$'
+          required title='must be 4 characters'
+        )
+
+      
