@@ -15,20 +15,24 @@ class App extends Component {
       id: 0,
       rdy: 0,
     },
-    nameTakenMsg: "",
+    nameTakenMsg: "Write your name and finish by pressing return.",
     location: 0,
     group: window.location.pathname, // url code/room name
-    userbase: [
-      { name: "Halli", team: 1, id: 1, rdy: 1 },
-      { name: "Sindri", team: 0, id: 2, rdy: 1 },
-      { name: "Gusti", team: 1, id: 3, rdy: 0 },
-    ],
+    userbase: [{ name: "EmptyRandomName", team: 1, id: 1, rdy: 1 }],
   };
 
   setUsername = (nameOfUser) => {
     // TODO: prevent repeat usernames
     // make a copy of the userbase
     let userbase = this.state.userbase;
+
+    if (nameOfUser.length < 3) {
+      this.setState({
+        nameTakenMsg: "Name must be at least 3 characters long!",
+      });
+      throw "new error";
+      return;
+    }
 
     // Is username taken?
     if (userbase.filter((ub) => ub.name === nameOfUser).length) {
@@ -186,7 +190,9 @@ class App extends Component {
 
     // get the userbase when connecting
     socket.on("List of Users", (userbase) => {
-      this.setState({ userbase: userbase });
+      if (userbase !== null) {
+        this.setState({ userbase: userbase });
+      }
     });
 
     // remove a disconnected user from database

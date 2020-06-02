@@ -25,7 +25,7 @@ class Username extends Component {
   render() {
     return (
       <div>
-        <h1>{this.state.nameTakenMsg}</h1>
+        <h1>{this.props.state.nameTakenMsg}</h1>
         <input
           type="text"
           onKeyDown={this.handleKeyDown}

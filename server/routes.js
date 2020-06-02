@@ -1,4 +1,4 @@
-module.exports = function (app, client, path, __dirname, express) {
+module.exports = function (app, path, __dirname, express) {
   // In here go all routing related things from the server side
 
 

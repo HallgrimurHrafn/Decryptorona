@@ -16,6 +16,7 @@ module.exports = function (socket, userbaseWithRooms) {
   socket.on('joinRoom', (group) => {
     socket.join(group);
     roomGroup = group;
+    socket.emit('List of Users', userbaseWithRooms[roomGroup]);
   })
 
   // new user has been generated

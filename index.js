@@ -2,10 +2,10 @@
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser')
-const {
-  Pool,
-  Client
-} = require('pg')
+// const {
+//   Pool,
+//   Client
+// } = require('pg')
 const http = require('http')
 const socketIO = require('socket.io')
 
@@ -28,12 +28,12 @@ app.use(bodyParser.urlencoded({
 }));
 
 // connection text for postgres sql server
-const connectionString = 'postgressql://postgres:hallgrimur@localhost:5432/testdb';
+// const connectionString = 'postgressql://postgres:hallgrimur@localhost:5432/testdb';
 // creating the postgres client
-const client = new Client({
-  connectionString: connectionString
-});
-client.connect();
+// const client = new Client({
+//   connectionString: connectionString
+// });
+// client.connect();
 
 
 // start the server
@@ -43,7 +43,7 @@ server.listen(port, () => console.log('Decrypto website listening on port ${port
 // app.use(express.static(path.join(__dirname, '/client/build/')));
 
 // get the routing system.    server/routes.js
-require('./server/routes')(app, client, path, __dirname, express)
+require('./server/routes')(app, path, __dirname, express)
 
 
 // get the socket.io system.    server/socketFunctions.js
